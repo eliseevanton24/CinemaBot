@@ -64,7 +64,7 @@ class FilmParser:
             link_tag = tag.find('a')
             if link_tag:
                 link_src = link_tag.get('href')
-                film_links.append("https://www.kinonews.ru/" + link_src)
+                film_links.append("https://www.kinonews.ru" + link_src)
         return film_links
 #Метод для извлечения информации о фильмах с одной страницы
     def extract_info_from_page(self, url):
@@ -89,6 +89,7 @@ class FilmParser:
             films_info.append(film_info)
 
         return films_info
+
 #Метод для извлечения информации о фильмах с нескольких страниц.
     def fetch_films_from_multiple_pages(self, num_pages):
         all_films_info = []
