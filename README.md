@@ -15,11 +15,13 @@ Python 3.7+
 1. Клонируйте репозиторий:
 
 git clone https://github.com/yourusername/yourrepository.git
+
 cd yourrepository
 
 2. Создайте и активируйте виртуальное окружение:
 
 python3 -m venv venv
+
 source venv/bin/activate
 
 3. Установите зависимости:
