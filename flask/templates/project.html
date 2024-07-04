@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Skills</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" type="text/css" href="D:\practica\test\static\styles\skills.css">-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/project.css') }}">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <div><a href="{{ url_for ('home')}}" class="logo">Practic</a></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <nav class="navbar">
+                <a href="{{ url_for ('home')}}" class="active">Home</a>
+                <a href="{{ url_for ('about')}}">About</a>
+                <a href="{{ url_for('skills') }}">Skills</a>
+                <a href="{{ url_for ('contact')}}">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div class="cont-col">
+                <section class="skills" id="skills">
+                    <h2 class="heading">Our <span>Project</span></h2>
+                    <!--one spisok-->
+                    <div class="skills-row">
+                        <div class="skills-column">
+                            <h3 class="title">Recipes</h3>
+                            <div class="skills-box">
+                                <div class="skills-content">
+                                    <div class="progress">
+                                        <a href="{{ url_for('recipes') }}">
+                                            <img class="recip" src="{{ url_for('static', filename='images/recipes.jpg')}}"> 
+                                        </a>
+                                        <h3 class="ingredi">The ingredient finder</h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--two spisok-->
+                        <div class="skills-column">
+                            <h3 class="title">Films</h3>
+                            <div class="skills-box">
+                                <div class="skills-content">
+                                    <div class="progress">
+                                        <a href="{{ url_for('films') }}">
+                                            <img class="recip" src="{{ url_for('static', filename='images/film.jpg')}}"> 
+                                        </a>
+                                        <h3>The movie finder</h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

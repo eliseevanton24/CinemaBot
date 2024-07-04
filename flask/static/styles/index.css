@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #be0662, #0400f1);
+  }
+  
+::selection{
+  background: #beccca;
+}
+header nav{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 12;
+}
+.navbar{
+  width: 90%;
+  display: flex;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 5rem;
+}
+
+header nav .logo{
+  height: 80px;
+  width: 150px;
+}
+.logo a {
+  color: #ffc0c0;
+  text-decoration: none;
+  width: 90%;
+  font-size: 3rem;
+  display: flex;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a:hover{
+  color: #16af9b;
+}
+nav .menu{
+  display: flex;
+  font-size: 5rem;
+}
+nav .menu li{
+  list-style: none;
+  margin: 0 10px;
+}
+nav .menu a{
+  color: #ffc0c0;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+nav .menu a:hover{
+  color: #16af9b;
+}
+.navbar a.activate {
+  color: #f700ff;
+  font-size: 2rem;
+}
+nav .search-box{
+  position: relative;
+  height: 40px;
+  width: 250px;
+}
+.search-box input[type="text"]{
+  position: absolute;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  color: #000000;
+  border: 2px solid #c95454;
+  background: #aa16af;
+  padding: 0 10px 0 40px;
+}
+.search-box a{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 20px;
+    color: #0000008c;
+    transform: translateY(-50%);
+    border-right: 2px solid #0077ff;
+    padding: 0 5px 0 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr); /* Создает 5 колонок с одинаковой шириной */
+    gap: 10px; /* Расстояние между карточками */
+} 
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.card {
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 242, 0.596);
+    transition: 0.3s;
+    border-radius: 5px;
+    background: #807474;
+    font-size: 2rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+.namefilm {
+    color: #00ffdd;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.classfilm {
+    font-size: 1.3rem;
+}
+.linkimg {
+    background: #000000;
+}
+.reiting{
+    font-size: 10rem;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgb(255, 0, 0);
+}
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.card-info {
+    padding: 5px;
+}

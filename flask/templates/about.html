@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8"><title> About </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="D:\fuck\static\styles\about.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <header>
+        <div>
+            <nav class="navbar">
+                <div>
+                    <ul>
+                        <li class="logo"><a href="{{ url_for('home') }}">Parsing</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="mn">
+            <p>
+                <br>An information system for collecting user-defined information from the Internet
+                <br>
+                <br>Technical specification for an information system for collecting user-defined information from the Internet:
+                <br>            
+                <br>1. The purpose of the project:
+                <br>- Collect and structure information from specified Internet resources specified by a specific user.
+                <br>       
+                <br>2. Functional requirements:
+                <br>- The user should be able to specify the Internet resources from which information should be collected.
+                <br>- The user should be able to specify criteria and filters for collecting information.
+                <br>- The system should be able to automatically collect and update information from the specified resources.
+                <br>- The system should be able to structure and display the collected information for the convenience of the user.
+                <br>            
+                <br>3. Non-functional requirements:
+                <br>- The program must be written in the Python programming language.
+                <br>- To collect information from the Internet, use the Requests and BeautifulSoup libraries.
+                <br>- The data must be stored in a MySQL database.
+                <br>- The user interface should be implemented as a web application using the Flask framework.
+                <br>- The system must be protected from unauthorized access.
+                <br>           
+                <br>4. Testing Requirements:
+                <br>- To test the collection of information from various Internet resources.
+                <br>- Check the correctness of the display and structuring of information.
+                <br>- Check the performance of the system with a large amount of data.
+                <br>           
+                <br>5. Work plan:
+                <br>- Development of the system architecture and database.
+                <br>- Writing scripts to collect information from Internet resources.
+                <br>- Development of a web-based user interface.
+                <br>- Testing and debugging of the system.
+                <br>- System implementation and user training.
+                <br>           
+                <br>6. Risk assessment:
+                <br>- Unavailability of Internet resources for collecting information.
+                <br>- Copyright infringement in the collection of information.
+                <br>          
+                <br>7. Update and Support plan:
+                <br>- Carrying out regular updates to maintain the health of the system.
+                <br>- Support and training of users on the use of the system.
+                <br>            
+                <br>Date of creation: 06.2024
+                <br>Developer: Website development, Parsing development, Bot development
+                <br>MTUCI
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>copyring &copy; 2024 by Students of Mtuci | All Rights Reserved.</p>
+        </div>
+        <div class="footer-icons">
+            <a href="{{ url_for('home') }}"><i class='bx bx-chevron-up-circle'></i></a>
+        </div>
+    </footer>
+  </body>
+</html>

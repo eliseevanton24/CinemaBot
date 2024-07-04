@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8"><title>Films</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="D:\fuck\static\styles\home.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="{{ url_for('home') }}">Parsing</a></div>
+        <ul class="menu">
+          <li><a href="{{ url_for('home') }}" class="activate">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('project') }}">Project</a></li>
+          <li><a href="{{ url_for('skills') }}">Skills</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+        <div class="search-box">
+          <input type="text" placeholder="Search here..."><a href="#"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="card-container">
+        {% for movie in movies %}
+        <div class="card">
+          <div class="card-info">
+            <h4 class="namefilm"><b>{{ movie['Column1'] }}</b></h4>
+            <p class="classfilm">{{ movie['Column2'] }}</p>
+            <td class="linkimg"><a href="{{ movie['Column4'] }}"><img src="{{ movie['Column3'] }}" alt="Картинка"></a></td>
+            <td class="reiting">{{ movie['Column5'] }}</td>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

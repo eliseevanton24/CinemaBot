@@ -1,13 +1,11 @@
 import asyncio
 import logging
 import sys
-
 from aiogram import Bot, Dispatcher, Router
 from aiogram.types import Message, CallbackQuery
 from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
-
 from handlers import command_start_handler, choose_genre, show_film_by_genre, send_random_film, GenreCallbackData, RandomCallbackData
 from config import TOKEN  # Импортируем TOKEN из config.py
 
