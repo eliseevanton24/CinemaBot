@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(to right, #ff0000, #0400f1);
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  background: #beccca;
+}
+header nav{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 12;
+}
+.navbar{
+  width: 90%;
+  display: flex;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 5rem;
+}
+
+header nav .logo{
+  height: 80px;
+  width: 150px;
+}
+.logo a {
+  color: #ffc0c0;
+  text-decoration: none;
+  width: 90%;
+  font-size: 3rem;
+  display: flex;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a:hover{
+  color: #16af9b;
+}
+nav .menu{
+  display: flex;
+  font-size: 5rem;
+}
+nav .menu li{
+  list-style: none;
+  margin: 0 10px;
+}
+nav .menu a{
+  color: #ffc0c0;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+nav .menu a:hover{
+  color: #16af9b;
+}
+.navbar a.activate {
+  color: #9408f1;
+  font-size: 2rem;
+}
+nav .search-box{
+  position: relative;
+  height: 40px;
+  width: 250px;
+}
+.search-box input[type="text"]{
+  position: absolute;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  color: #000000;
+  border: 2px solid #c95454;
+  background: #16af9b;
+  padding: 0 10px 0 40px;
+}
+.search-box a{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 20px;
+  color: #6d56a3;
+  transform: translateY(-50%);
+  border-right: 2px solid #0077ff;
+  padding: 0 5px 0 0;
+}

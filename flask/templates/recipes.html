@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"><title> Recipes </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/recipes.css') }}">
+    <!--<link rel="stylesheet" type="text/css" href="D:\fuck\static\styles\home.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+          <div class="logo"><a href="{{ url_for('home') }}">Parsing</a></div>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}" class="activate">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('project') }}">Project</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+          <div class="search-box">
+            <input type="text" placeholder="Search here..."><a href="#"><i class="fas fa-search"></i></a>
+          </div>
+        </div>
+      </nav>
+    <h1>Список рецептов</h1>
+    <table border="1">
+        <tr>
+            <th>Блюдо</th>
+            <th>Ингредиенты</th>
+            <th>Ссылка на рецепт</th>
+            <th>Изображение блюда</th>
+        </tr>
+        {% for recipe in recipes %}
+            <tr>
+                <td>{{ recipe['Блюдо'] }}</td>
+                <td>{{ recipe['Ингредиенты'] }}</td>
+                <td><a href="{{ recipe['Ссылка на рецепт'] }}">Посмотреть рецепт</a></td>
+                <td><img src="{{ url_for('static', filename=recipe['Column4']) }}" alt="{{ recipe['Блюдо'] }}"></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

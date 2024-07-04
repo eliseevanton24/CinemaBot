@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"><title> Films </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/films.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <heading>
+        <div>
+            <nav>
+                <div class="navbar">
+                    <div class="logo"><a href="{{ url_for('home') }}">Parsing</a></div>
+                    <ul class="menu">
+                        <li><a href="{{ url_for('home') }}" class="activate">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('project') }}">Project</a></li>
+                        <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search here..."><a href="#"><i class="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </heading>
+    <selection>
+        <div>
+            <nav>
+                <div class="contaner">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4><b>{{ row['Column1']}}</b></h4>
+                            <p></p>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </selection>
+    <h1>Данные из XLSX файла фильмы</h1>
+    <table border="1">
+        <tr>
+            <th>Название</th>
+            <th>Жанр</th>
+            <th>Картинка</th>
+            <th>Ссылка</th>
+            <th>Рейтинг</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['Column1'] }}</td>
+            <td>{{ row['Column2'] }}</td>
+            <td><img src="{{ row['Column3'] }}" alt="Картинка"></td>
+            <td><a href="{{ row['Column4'] }}">Ссылка</a></td>
+            <td>{{ row['Column5'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
