@@ -1,0 +1,166 @@
+/* Общие стили */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ec7373, #54bec2); /* Linear gradient from left to right */
+}
+
+/* Шапка */
+header {
+  background-color: #112e42;
+  color: #ff0000;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  color: #ffc0c0;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo a:hover{
+  color: #16af9b;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu a {
+  color: #ffc0c0;
+  text-decoration: none;
+}
+.menu a:hover{
+  color: #16af9b;
+}
+
+.menu a.activate {
+  color: #f700ff;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-box a {
+  background-color: #16af9b;;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #f00; /* Красная тень с размытием */
+}
+
+.filmstype {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px; /* Increased width for larger image */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #aab6be;
+}
+
+.list h2 {
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.list p {
+  margin-bottom: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+}
+
+.list img {
+  width: 100%; /* Image takes full width of the container */
+  max-height: 300px; /* Increased height for larger image */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.back {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #af4c4c;
+  color: rgb(64, 214, 181);
+  text-decoration: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.back:hover {
+  background-color: #454ea0;
+}
+
+  /* Отзывчивый дизайн */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .search-box {
+      margin-top: 10px;
+    }
+  }

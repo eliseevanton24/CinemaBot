@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/films.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Films</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navbar">
+                <div class="logo"><a href="{{ url_for('index') }}">Parsing</a></div>
+                <ul class="menu">
+                    <li><a href="{{ url_for('index') }}" class="activate">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('project') }}">Project</a></li>
+                    <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search here..."><a href="#"><i class="fas fa-search"></i></a>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <h1 class="h1">List of films</h1>
+            <ul class="filmstype">
+                {% for film in films %}
+                    <li class="list">
+                        <h2>{{ film['name'] }}</h2>
+                        <p>Жанр: {{ film['genre'] }}</p>
+                        <p>Рейтинг: {{ film['rating'] }}</p>
+                        <img src="{{ film['image'] }}" alt="{{ film['name'] }}">
+                        <p><a href="{{ film['link'] }}">Подробнее</a></p>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ url_for ('project')}}" class="back">Назад</a>
+        </main>
+    </body>
+</html>
