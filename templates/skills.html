@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Skills</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/skills.css') }}">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <a href="{{ url_for ('index')}}" class="logo">Practic</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <nav class="navbar">
+                <a href="{{ url_for ('index')}}" class="active">Home</a>
+                <a href="{{ url_for ('about')}}">About</a>
+                <a href="{{ url_for ('project')}}">Project</a>
+                <a href="{{ url_for ('contact')}}">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <div class="cont-col">
+                <section class="skills" id="skills">
+                    <h2 class="heading">Our <span>Skills</span></h2>
+                    <div class="skills-row">
+                        <div class="skills-column">
+                            <h3 class="title">Coding Skills</h3>
+                            <div class="skills-box">
+                                <div class="skills-content">
+                                    <div class="progress">
+                                        <h3>Python <span>40%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>SQL <span>60%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Flask <span>70%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Git <span>100%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Docker <span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>HTML <span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>CSS<span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--two spisok-->
+                        <div class="skills-column">
+                            <h3 class="title">Professionall Skills</h3>
+                            <div class="skills-box">
+                                <div class="skills-content">
+                                    <div class="progress">
+                                        <h3>Web Disigb <span>60%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Web Developmer <span>80%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Testing <span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Databases  <span>60%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Tools and technologies <span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Programming languages <span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                    <div class="progress">
+                                        <h3>Additional skills <span>90%</span></h3>
+                                        <div class="bar"><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</htmL>

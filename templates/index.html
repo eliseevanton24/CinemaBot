@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8"><title> Parsing </title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <div> 
+      <img class="fon" src="{{ url_for('static', filename='images/fon.jpg')}}">
+      <header>
+        <nav>
+          <div class="navbar">
+            <div class="logo"><a href="{{ url_for('index') }}">Parsing</a></div>
+            <ul class="menu">
+              <li><a href="{{ url_for('index') }}" class="activate">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('project') }}">Project</a></li>
+              <li><a href="{{ url_for('skills') }}">Skills</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+            <div class="search-box">
+              <input type="text" placeholder="Search here..."><a href="#"><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </nav>
+        <div class="content">
+          <div class="text-content">
+            <div class="text">Hello, It's Me </div>
+            <div class="name">Parsing</div>
+            <div class="job">
+              <div class="job">
+                <span>And I'm a</span>
+                <div class="typing-text">
+                  <span class="one">Test,</span>
+                  <span class="two">Mode.</span>
+                </div>
+              </div>
+            </div>
+            <div class="buttons">
+              <button><a href="https://t.me/+a9fXrznQujsyZjk6" class="folme">About Me</a></button>
+              <button><a href="https://t.me/best_movies_2024_bot" class="folme">Follow Me</a></button>
+            </div>
+          </div>
+          <div class="par"> 
+            <img src="{{ url_for('static', filename='images/api.gif')}}" alt="">
+          </div>
+        </div>
+        <div class="media-icons">
+          <a href="https://about.gitlab.com/"><i class="fab fa-gitlab"></i></a>
+          <a href="https://t.me/best_movies_2024_bot"><i class="fab fa-telegram"></i></a>
+          <a href="https://github.com/eliseevanton24/CinemaBot"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-vk"></i></a>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>

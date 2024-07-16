@@ -1,0 +1,140 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    background: url('/static/images/fon.jpg') no-repeat;
+  }
+  
+  /* Шапка */
+  header {
+    background-color: #112e42;
+    color: #ff0000;
+    padding: 10px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo a {
+    color: #ffc0c0;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .logo a:hover{
+    color: #16af9b;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+  }
+  
+  .menu li {
+    margin-left: 20px;
+  }
+  
+  .menu a {
+    color: #ffc0c0;
+    text-decoration: none;
+  }
+  .menu a:hover{
+    color: #16af9b;
+  }
+  
+  .menu a.activate {
+    color: #f700ff;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-box a {
+    background-color: #16af9b;;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  /* Основной контент */
+  .container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: linear-gradient(to left, #ff1a1a, #d6338d, #3468d8);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4150a1;
+    border-radius: 5px;
+    font-size: 1.5rem;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+  }
+  
+  /* Отзывчивый дизайн */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .menu {
+      flex-direction: column;
+    }
+  
+    .menu li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .search-box {
+      margin-top: 10px;
+    }
+  }

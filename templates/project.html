@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/project.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Project</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navbar">
+                <div class="logo"><a href="{{ url_for('index') }}">Parsing</a></div>
+                <ul class="menu">
+                    <li><a href="{{ url_for('index') }}" class="activate">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('project') }}">Project</a></li>
+                    <li><a href="{{ url_for('skills') }}">Skills</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search here..."><a href="#"><i class="fas fa-search"></i></a>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <main class="container">
+            <h1>Choose a movie</h1>
+            <form action="/films" method="get">
+                <select name="genre">
+                    <option value="">Random selection</option>
+                    {% for genre in genres %}
+                        <option value="{{ genre['genre'] }}">{{ genre['genre'] }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Show a movie</button>
+            </form>
+        </main>
+    </body>
+</html>
